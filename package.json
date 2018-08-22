@@ -1,0 +1,17 @@
+{
+  "name": "generate-open-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "joi-to-swagger": "^3.0.0",
+    "load-json-file": "^5.0.0",
+    "parse-json": "^4.0.0",
+    "writejson": "^2.0.1"
+  }
+}
