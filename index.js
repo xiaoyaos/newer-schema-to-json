@@ -29,7 +29,6 @@ function pretreatment(err, data){
 
   //拿到需要require的包名或路径
 　requireList = routesContent.match(/const .*= require\(\'.*[);$]/g);
-  getRequirePak();
 
   //去除require
   routesContent = routesContent.replace(/const .*= require\(\'.*[);$]/g,"");
@@ -52,15 +51,4 @@ function pretreatment(err, data){
 
   parserSchema(schemaList1);
   // parserRouter(result);
-}
-
-/**
- *  获取reuiqre的包名
- */
-function getRequirePak(){
-  var reg = /(?<=\')[^\']+/g;
-  for(let k in requireList){
-    requireList[k] = requireList[k].match(reg)[0];
-  }
-  // console.log(requireList);
 }
